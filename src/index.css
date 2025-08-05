@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-dark-800 rounded-lg shadow-sm border border-gray-200 dark:border-dark-700 p-6;
+  }
+  
+  .metric-card {
+    @apply card hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .status-indicator {
+    @apply w-3 h-3 rounded-full;
+  }
+  
+  .status-online {
+    @apply bg-green-500 animate-pulse-slow;
+  }
+  
+  .status-offline {
+    @apply bg-red-500;
+  }
+  
+  .status-warning {
+    @apply bg-yellow-500 animate-bounce-slow;
+  }
+} 
